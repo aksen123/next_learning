@@ -9,7 +9,7 @@ export default async function Home() {
 // console.log(result)
   return (
   <div>
-    
+    ㅎ2
   </div>
   )
 }
