@@ -1,5 +1,5 @@
 import { MongoClient } from 'mongodb'
-const url = 'url'
+const url = 'mongodb+srv://admin:alsdnr1203@cluster0.3xm0rw3.mongodb.net/?retryWrites=true&w=majority'
 const options = { useNewUrlParser: true }
 let connectDB
 
