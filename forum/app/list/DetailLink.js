@@ -5,7 +5,7 @@ import { useRouter,usePathname } from "next/navigation"
 export default function DetailLink() {
   let router = useRouter()
   let a = usePathname()
-  console.log(a)
+  // console.log(a)
   return (
     <button onClick={()=>{}}>버튼</button>
   )

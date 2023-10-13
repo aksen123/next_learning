@@ -2,7 +2,7 @@ import {connectDB} from "/util/database"
 import { ObjectId } from "mongodb";
 
 async function Editor(req, res)  {
-    console.log(req.body)
+    // console.log(req.body)
     const filter = {_id:  new ObjectId(req.body._id) }
     console.log(filter)
     let db = (await connectDB).db("forum");
