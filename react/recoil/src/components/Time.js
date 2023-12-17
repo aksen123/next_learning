@@ -11,7 +11,7 @@ export default function Time() {
       <input onChange={(event)=>{
         console.log(test)
         setTest((test)=>{
-          let time = {hour : +event.currentTarget.value, minute: test.minute}
+          let time = {...test,hour : +event.currentTarget.value}
           return time;
         })
       }}/>시간은 {test2.minute}분 입니다
@@ -20,7 +20,7 @@ export default function Time() {
        <input onChange={(event)=>{
         console.log(test)
         setTest((test)=>{
-          let time = {hour : test.hour, minute: +event.currentTarget.value}
+          let time = {...test, minute: +event.currentTarget.value}
           return time;
         })
       }}/>분은 {test2.hour}시간 입니다.
