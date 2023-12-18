@@ -57,7 +57,6 @@ const [text, setText] = useState('');
         <input value={text} onChange={(e)=>{setText(e.currentTarget.value)}}/>
         <button onClick={()=>{
             let newTodo = {text : text, done: false}
-            let todo = [newTodo, ...toDos]
             setToDos((todos) => [newTodo, ...todos]);
             setText('')
         }}>Add</button>

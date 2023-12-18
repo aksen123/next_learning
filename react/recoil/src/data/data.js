@@ -1,4 +1,4 @@
-export const todoTest = [
+ const todoTest = [
   {
   text : 'todo text1',
   done : false
