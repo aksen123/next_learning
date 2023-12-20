@@ -16,8 +16,6 @@ export default function List() {
   return (
     <div>
       <h4 className='title'>상품목록</h4>
-      <span></span>
-      <button>+</button>
       {
         상품.map((it,i)=>{
           return (

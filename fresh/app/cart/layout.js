@@ -1,11 +1,11 @@
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return (
     <html lang="en">
-      <body >
+      <div className="cart">
       <p>현대카드 무이자이벤트중</p> 
         {children}
-      </body>
+      </div>
     </html>
   );
 }
