@@ -1,4 +1,3 @@
-
 export default function Cart() {
   let 장바구니 =['tomatoes', 'pasta']
   return (

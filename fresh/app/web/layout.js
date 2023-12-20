@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Control from "./Control";
 
 export const metadata = {
   title: "Test Web",
@@ -6,20 +7,25 @@ export const metadata = {
 }
 
 
-export default function layout({children}) {
+export default async function layout({children}) {
+
+  const resp = await fetch('http://localhost:9999/topics/',{cache:'no-cache'}) 
+  const topics = await resp.json();
+  console.log(topics)
   return (
     <div className="web-page">
       <ol>
         <li><Link href="/web">WEB</Link></li>
-        <li><Link href="/web/read/1">HTML</Link></li>
-        <li><Link href="/web/read/2">CSS</Link></li>
+        {topics.map(topic=>{
+  return (
+    <li key={topic.id}>
+      <Link href={`/web/read/${topic.id}`}>{topic.title}</Link>
+    </li>
+  );
+})}
       </ol>
     {children}
-      <ul>
-        <li><Link href="/web/create">Create</Link></li>
-        <li><Link href="/web/update">Update</Link></li>
-        <li><button>Delete</button></li>
-      </ul>
+    <Control />
     </div>
   )
 }
