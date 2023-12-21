@@ -1,7 +1,7 @@
 // 'use client'
 
 export default async function Read(props){
-  const resp = await fetch(`http://localhost:9999/topics/${props.params.id}`) 
+  const resp = await fetch(`http://localhost:9999/topics/${props.params.id}`, {cache:'no-cache'}) 
   const topics = await resp.json();
   return(
     <>
