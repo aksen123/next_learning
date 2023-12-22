@@ -27,5 +27,25 @@
       "title": "CSS",
       "body": "css i"
     }
+  ],
+  "food": [
+    {
+      "id": 1,
+      "food": "Tomato",
+      "price" : "40$",
+      "count" : 0
+    },
+    {
+      "id": 2,
+      "food": "Pasta",
+      "price" : "50$",
+      "count" : 0
+    },
+    {
+      "id": 3,
+      "food": "Coconut",
+      "price" : "60$",
+      "count" : 0
+    }
   ]
 }
