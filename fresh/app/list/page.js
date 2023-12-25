@@ -11,8 +11,13 @@ export default function List() {
       try{
         let response = await fetch('http://localhost:9999/food');
         let data = await response.json();
-        set상품(data);
-        수량변경([...new Array(data.length).keys()].map(it => it = 0));
+        console.log(data,상품,"::::: data")
+        if(!상품 == []){
+          set상품(data);
+          수량변경([...new Array(data.length).keys()].map(it => it = 0));
+        }
+
+
       }
       catch(error) {
         console.error('Error fetching data:', error);
@@ -21,13 +26,13 @@ export default function List() {
   
     fetchData();
   },[])
-  console.log(상품,장바구니)
+  // console.log(상품,장바구니)
   const onClick = (num, i)=>{
     const newArr = [...수량]
     newArr[i] = newArr[i] + num < 0 ? 0 : newArr[i] + num
     수량변경(newArr)
   }
-  console.log(수량)
+  // console.log(수량)
   return (
     <div>
       <h4 className='title'>상품목록</h4>
@@ -42,8 +47,8 @@ export default function List() {
             <button onClick={()=>onClick(1,i)}>+</button>
             <button onClick={()=>{
               let arr = [...상품]
-              arr[i] = {...it, count: 수량[i]}
-
+              arr[i] = {...it, count: 상품[i].count +수량[i]}
+              console.log(상품[i],상품[i].count, 수량[i])
               set상품(arr)
             }}>장바구니 담기</button>
           </div>
