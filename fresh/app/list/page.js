@@ -6,16 +6,17 @@ export default function List() {
   const 장바구니 = useRecoilValue(listSelector)
   let [상품, set상품] =  useRecoilState(listState)
   let [수량, 수량변경] =  useState([])
+
   useEffect( ()=>{
     const fetchData = async () => {
       try{
         let response = await fetch('http://localhost:9999/food');
         let data = await response.json();
         console.log(data,상품,"::::: data")
-        if(!상품 == []){
+        if(상품.length == 0){
           set상품(data);
-          수량변경([...new Array(data.length).keys()].map(it => it = 0));
         }
+        수량변경([...new Array(data.length).keys()].map(it => it = 0));
 
 
       }
@@ -50,6 +51,7 @@ export default function List() {
               arr[i] = {...it, count: 상품[i].count +수량[i]}
               console.log(상품[i],상품[i].count, 수량[i])
               set상품(arr)
+              수량[i] = 0
             }}>장바구니 담기</button>
           </div>
           )
