@@ -1,3 +1,7 @@
+a {
+  color: #000;
+  text-decoration: none;
+}
 .black-nav {
   background : black;
   width : 100%;
@@ -18,4 +22,18 @@ div {
   padding : 20px;
   background : #eee;
   text-align : left;
+}
+.main-nav {
+  background-color: #ccc;
+  padding: 0 0 0 20px;
+  height: 50px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.main-bg {
+  height : 300px;
+  background-image : url('./img/bg.png');
+  background-size : cover;
+  background-position : center;
 }
