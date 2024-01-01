@@ -1,5 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 div {
   border: 6px solid black;
   padding: 5px;
   margin: 5px;
+}
+.title {
+  @apply text-xl font-bold
 }

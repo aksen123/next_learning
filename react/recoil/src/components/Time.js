@@ -5,7 +5,7 @@ export default function Time() {
   const test2 = useRecoilValue(timeSelector)
   return (
     <div>
-      <h1>
+      <h1 className="title"> 
       Time
       </h1>
       <input onChange={(event)=>{

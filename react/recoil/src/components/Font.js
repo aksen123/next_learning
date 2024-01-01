@@ -7,9 +7,10 @@ export default function FontButton() {
 
   return (
     <div>
-      <h1>Font</h1>
-      <span>현재 폰트 사이즈 : {fontSizeLabel}</span>
+      <h1 className="title">Font</h1>
+      <span className="text-blue-800 font-semibold">현재 폰트 사이즈 : {fontSizeLabel}</span>
       <br />
+      
       <button onClick={()=>{setFontSize(fontSize + 1)}} style={{fontSize: `${fontSizeLabel}`}}>
         폰트 키우기
       </button>

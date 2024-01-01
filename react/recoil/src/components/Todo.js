@@ -52,7 +52,7 @@ const [text, setText] = useState('');
 // }
   return (
     <div>
-      <h1>Todo</h1>
+      <h1 className="title">Todo</h1>
       {/* <input onChange={test}/> */}
         <input value={text} onChange={(e)=>{setText(e.currentTarget.value)}}/>
         <button onClick={()=>{
