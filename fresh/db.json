@@ -15,37 +15,5 @@
   ],
   "profile": {
     "name": "typicode"
-  },
-  "topics": [
-    {
-      "id": 1,
-      "title": "HTML",
-      "body": "html is..."
-    },
-    {
-      "id": 2,
-      "title": "CSS",
-      "body": "css i"
-    }
-  ],
-  "food": [
-    {
-      "id": 1,
-      "food": "Tomato",
-      "price" : "40$",
-      "count" : 0
-    },
-    {
-      "id": 2,
-      "food": "Pasta",
-      "price" : "50$",
-      "count" : 0
-    },
-    {
-      "id": 3,
-      "food": "Coconut",
-      "price" : "60$",
-      "count" : 0
-    }
-  ]
+  }
 }

@@ -2,8 +2,9 @@
 
 import { listSelector,listState } from "../atoms/list-atom"
 import { useRecoilValue,useRecoilState } from "recoil"
+
 export default function Cart() {
-  const 장바구니 = useRecoilValue(listState).filter(it => it.count > 0)
+  const 장바구니 = useRecoilValue(listSelector)
   
   console.log(장바구니)
   return (
@@ -26,13 +27,11 @@ function Button({color}) {
 }
 
 function CartItem(props) {
-  const [장바구니2, set장바구니2] = useRecoilState(listState)
-  let count = props.count
-  // console.log(props.count)
+  const [장바구니2, set장바구니2] = useRecoilState(listState);
   const onClick = (num,i) => {
     let arr = [...장바구니2];
-    arr[i] = {...arr[i], count: props.count + num}
-    set장바구니2(arr)
+    arr[i] = {...arr[i], count: props.count + num};
+    set장바구니2(arr);
   }
   return (
     <div className="cart-item">
