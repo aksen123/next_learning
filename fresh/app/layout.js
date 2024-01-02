@@ -21,7 +21,6 @@ export default function RootLayout({ children }) {
           <Link href={"/web"}>web</Link>
           <Link href={"/cyworld"}>CyWorld</Link>
         </div>
-        <div className="text-red-600">test</div>
         {children}
         </RecoilWrapper>
       </body>
