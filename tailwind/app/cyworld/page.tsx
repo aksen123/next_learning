@@ -3,7 +3,7 @@
 export default function Test() {
   return (
     <>
-    test page
+    cyworld main page
     </>
   )
 }
