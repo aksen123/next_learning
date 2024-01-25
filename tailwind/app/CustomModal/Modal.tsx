@@ -12,7 +12,6 @@ interface Props {
 const Modal = ({ open, onClose, children }: Props) => {
   useEffect(() => {
     const body = document.querySelector("body");
-    console.log(children);
   }, [open]);
   const root =
     typeof document !== "undefined"

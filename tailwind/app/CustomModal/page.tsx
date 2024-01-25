@@ -10,7 +10,7 @@ const page = () => {
   return (
     <div className="w-1/2 h-1/2 border-2 border-red-600 flex gap-5 justify-center">
       <button onClick={() => setModalView(!modalView)}>모달</button>
-      <button onClick={() => setModalView(!modalView)}>Alert</button>
+      <button onClick={() => setAlertView(!alertView)}>Alert</button>
       <Modal open={modalView} onClose={() => setModalView(false)}>
         <TestComp />
       </Modal>
