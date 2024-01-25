@@ -1,9 +1,7 @@
-
+import Link from "next/link"
 
 export default function Test() {
   return (
-    <>
-    cyworld main page
-    </>
+<>main page</>
   )
 }
