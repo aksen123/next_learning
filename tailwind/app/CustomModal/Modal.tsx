@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import ReactDOM from "react-dom";
 
 interface Props {
@@ -10,9 +9,6 @@ interface Props {
 }
 
 const Modal = ({ open, onClose, children }: Props) => {
-  useEffect(() => {
-    const body = document.querySelector("body");
-  }, [open]);
   const root =
     typeof document !== "undefined"
       ? document.querySelector("#modal-root")
