@@ -4,31 +4,28 @@ import TestComp from "./TestComp";
 import Modal from "./Modal";
 import Alert from "./Alert";
 import { useEffect, useState } from "react";
+
+type alert = (message: string, callback?: () => void) => void;
+
 const page = () => {
   const [modalView, setModalView] = useState(false);
   const [alertView, setAlertView] = useState(false);
 
-  useEffect(() => {
-    window.alert = (message: string, callback?: () => void) => {
-      console.log(message);
-      callback && callback();
+  const test: alert = (text1, cb) => {
+    window.alert = () => {
+      console.log(text1);
+      cb && cb();
     };
-  }, []);
-  const testAlert = () => {
-    window.alert("test", () => {
-      if (confirm("hi")) {
-        console.log(true);
-        setAlertView(true);
-      } else {
-        console.log(false);
-      }
-    });
+    return window.alert();
   };
+
   return (
     <div className="w-1/2 h-1/2 border-2 border-red-600 flex gap-5 justify-center">
       <button onClick={() => setModalView(!modalView)}>모달</button>
-      <button onClick={() => setModalView(!modalView)}>Alert</button>
-      <button onClick={() => testAlert()}>test</button>
+      <button onClick={() => setAlertView(!alertView)}>Alert</button>
+      <button onClick={() => test("123111", () => console.log("!!!"))}>
+        test
+      </button>
       <Modal open={modalView} onClose={() => setModalView(false)}>
         <TestComp />
       </Modal>

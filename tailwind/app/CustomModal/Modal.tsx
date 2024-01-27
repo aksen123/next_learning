@@ -19,7 +19,7 @@ const Modal = ({ open, onClose, children }: Props) => {
     <>
       <div
         onClick={onClose}
-        className="fixed top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.5)]"
+        className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.5)]"
       >
         <div
           onClick={(e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()}
