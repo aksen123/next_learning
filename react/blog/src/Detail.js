@@ -16,7 +16,6 @@ export default function Detail({ shoes }) {
     return (
       <div className="container">
         {alert11 && <div className="alert-box">2초후 사라짐</div>}
-        <input value={text} onChange={(e) => setText(e.target.value)} />
         <div className="row">
           <div className="col-md-6">
             <img

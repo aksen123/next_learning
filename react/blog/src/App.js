@@ -5,18 +5,17 @@ import Blog from "./Blog";
 import Shop from "./Shop";
 import Detail from "./Detail";
 function App() {
-
   return (
     <>
-    <div className="main-nav">
-      <Link to={"/blog"}>Blog</Link>
-      <Link to={"/shop"}>Shop</Link>
-    </div>
-    <Routes>
-      <Route path="/blog" element={<Blog />}/>
-      <Route path="/shop/*" element={<Shop />}/>
-      {/* <Route path="/shop/detail" element={<Detail />}/> */}
-    </Routes>
+      <div className="main-nav">
+        <Link to={"/blog"}>Blog</Link>
+        <Link to={"/shop"}>Shop</Link>
+      </div>
+      <Routes>
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/shop/*" element={<Shop />} />
+        {/* <Route path="/shop/detail" element={<Detail />}/> */}
+      </Routes>
     </>
   );
 }
