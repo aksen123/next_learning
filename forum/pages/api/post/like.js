@@ -37,7 +37,7 @@ export default async function handler(res,req){
         let check = await db.collection('like').findOne({author: session?.user.email,parent : res.body})
         console.log(check, 123123)
         if (check === null) {
-          let result = await db.collection("like").insertOne(data);
+          await db.collection("like").insertOne(data);
           let arr = await db.collection('like').find({parent : res.body }).toArray();
           let result_data = {
             data : arr,
@@ -45,7 +45,7 @@ export default async function handler(res,req){
           }
           req.status(200).json(result_data);
         } else {
-          let result = await db.collection("like").deleteOne(data);
+           await db.collection("like").deleteOne(data);
           let arr = await db.collection('like').find({parent : res.body}).toArray();
           let result_data = {
             data : arr,

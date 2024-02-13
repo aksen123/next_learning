@@ -9,6 +9,6 @@ if (process.env.NODE_ENV === 'development') {
   }
   connectDB = global._mongo
 } else {
-  connectDB = new MongoClient(url, options).connect()
+    connectDB = new MongoClient(url, options).connect()
 }
 export { connectDB }
